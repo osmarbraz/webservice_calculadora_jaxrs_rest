@@ -36,7 +36,7 @@ public class CalculadoraRecurso {
         Calculadora calculadora = new Calculadora();
 
         //Recupera o resultado
-        CalculadoraResultado calculadoraResultado = calculadora.getAdicao(a, b);
+        CalculadoraResultado calculadoraResultado = calculadora.getSoma(a, b);
 
         //Mensagem de retorno
         return Response.ok(calculadoraResultado, MediaType.APPLICATION_JSON).build();
@@ -62,7 +62,7 @@ public class CalculadoraRecurso {
         Calculadora calculadora = new Calculadora();
 
         //Recupera o objeto de resultado
-        CalculadoraResultado calculadoraResultado = calculadora.getSubtracao(a, b);
+        CalculadoraResultado calculadoraResultado = calculadora.getDiferenca(a, b);
 
         //Mensagem de retorno
         return Response.ok(calculadoraResultado, MediaType.APPLICATION_JSON).build();
@@ -72,17 +72,17 @@ public class CalculadoraRecurso {
      * Serviço de produto.
      *
      * curl
-     * http://localhost:8080/webservice_calculadora_jaxrs_rest/rest/calculadora/produto/5/2
+     * http://localhost:8080/webservice_calculadora_jaxrs_rest/rest/calculadora/multiplicacao/5/2
      *
      * @param a Um valor real
      * @param b Um valor real
      * @return
      */
     @GET
-    @Path("/produto/{a}/{b}")
+    @Path("/multiplicacao/{a}/{b}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response produto(@PathParam("a") double a, @PathParam("b") double b) {
-        System.out.println("Executando serviço produto.");
+    public Response multiplicacao(@PathParam("a") double a, @PathParam("b") double b) {
+        System.out.println("Executando serviço multiplicacao.");
 
         //Instancia a calculadora
         Calculadora calculadora = new Calculadora();
@@ -114,7 +114,7 @@ public class CalculadoraRecurso {
         Calculadora calculadora = new Calculadora();
         
         //Recupera o objeto de resultado
-        CalculadoraResultado calculadoraResultado = calculadora.getDivisao(a, b);
+        CalculadoraResultado calculadoraResultado = calculadora.getQuociente(a, b);
 
         //Mensagem de retorno
         return Response.ok(calculadoraResultado, MediaType.APPLICATION_JSON).build();

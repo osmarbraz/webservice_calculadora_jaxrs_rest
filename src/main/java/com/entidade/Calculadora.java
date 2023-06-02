@@ -6,7 +6,7 @@ package com.entidade;
  */
 public class Calculadora {
 
-    public CalculadoraResultado getAdicao(double a, double b) {
+    public CalculadoraResultado getSoma(double a, double b) {
         double resultado = a + b;
         System.out.println("A = " + a + " + B = " + b + " Resultado: " + resultado);
 
@@ -15,7 +15,7 @@ public class Calculadora {
         return calculadoraResultado;
     }
 
-    public CalculadoraResultado getSubtracao(double a, double b) {
+    public CalculadoraResultado getDiferenca(double a, double b) {
         double resultado = a - b;
         System.out.println("A = " + a + " - B = " + b + " Resultado: " + resultado);
         CalculadoraResultado calculadoraResultado = new CalculadoraResultado(a, b, "-", resultado);
@@ -31,7 +31,7 @@ public class Calculadora {
         return calculadoraResultado;
     }
 
-    public CalculadoraResultado getDivisao(double a, double b) {
+    public CalculadoraResultado getQuociente(double a, double b) {
         double resultado = a / b;
         System.out.println("A = " + a + " / B = " + b + " Resultado: " + resultado);
         CalculadoraResultado calculadoraResultado = new CalculadoraResultado(a, b, "/", resultado);
